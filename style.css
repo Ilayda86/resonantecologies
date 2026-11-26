@@ -1124,14 +1124,14 @@ body:has(#location-overlay.open) .map-ack {
   right: 0.25rem;
   bottom: 0.15rem;
   z-index: 55;
-  color: #595959;
-  font-size: 0.6875rem;
+  color: #888888;
+  font-size: 8px;
   line-height: 1.4;
 }
 
 .map-attribution a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .map-attribution button {
