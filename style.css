@@ -166,7 +166,7 @@ html, body {
 }
 
 .author-name {
-  font-size: 0.9375rem;
+  font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.14em;
   color: #1a1a1a;
@@ -175,16 +175,16 @@ html, body {
 }
 
 .author-role {
-  font-size: 0.8125rem;
+  font-size: 0.68rem;
   line-height: 1.5;
   color: #555555;
   margin-bottom: 1rem;
 }
 
 .author-bio {
-  font-size: 0.875rem;
+  font-size: 0.62rem;
   font-weight: 300;
-  line-height: 1.65;
+  line-height: 1.9;
   letter-spacing: 0.04em;
   color: #555555;
   margin-bottom: 0.85rem;
@@ -302,6 +302,17 @@ html, body {
   color: #aaaaaa;
   margin-bottom: 1.75rem;
   line-height: 1.6;
+}
+
+.project-map-credits {
+  margin-top: 1rem;
+  font-size: 0.68rem;
+  line-height: 1.7;
+  color: #555555;
+}
+
+.project-map-sources p {
+  margin-top: 0.55rem;
 }
 
 .enter-btn {
@@ -1119,17 +1130,52 @@ body:has(#location-overlay.open) .map-ack {
   right: var(--edge) !important;
 }
 
-.map-attribution {
+.map-credits {
   position: fixed;
-  right: var(--edge);
+  left: var(--edge);
   bottom: 0.35rem;
   z-index: 55;
-  padding: 0.1rem 0.3rem;
+  max-width: calc(100% - 2 * var(--edge));
+  color: #444444;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+}
+
+.map-credits summary,
+.project-map-credits summary {
+  cursor: pointer;
+}
+
+.map-credits[open] {
+  z-index: 66;
+}
+
+.map-credits summary {
+  padding: 0.15rem 0.3rem;
   border-radius: 3px;
-  color: #333;
   background: rgba(255, 255, 255, 0.95);
-  font-size: 0.75rem;
-  line-height: 1.2;
+}
+
+.map-credits-sources {
+  position: absolute;
+  bottom: calc(100% + 0.25rem);
+  left: 0;
+  width: max-content;
+  max-width: min(17rem, calc(100vw - 2 * var(--edge)));
+  padding: 0.5rem 0.65rem;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+
+.map-credits-sources p + p {
+  margin-top: 0.35rem;
+}
+
+.map-credits-sources a,
+.project-map-sources a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 /* Bottom-left map acknowledgment */
