@@ -1121,17 +1121,29 @@ body:has(#location-overlay.open) .map-ack {
 
 .map-attribution {
   position: fixed;
-  right: var(--edge);
-  bottom: 0.35rem;
+  right: 0.25rem;
+  bottom: 0.15rem;
   z-index: 55;
-  max-width: calc(100% - 2 * var(--edge));
-  padding: 0.15rem 0.3rem;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.95);
-  color: #444444;
+  color: #595959;
   font-size: 0.6875rem;
   line-height: 1.4;
+}
+
+.map-attribution a {
+  color: inherit;
   text-decoration: underline;
+}
+
+.map-attribution button {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: right;
+  cursor: pointer;
 }
 
 /* Bottom-left map acknowledgment */
