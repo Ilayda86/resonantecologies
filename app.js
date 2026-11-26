@@ -1145,33 +1145,5 @@ document.addEventListener('keydown', e => {
 
 // ── Boot ──────────────────────────────────────────────────────────────────
 
-function initMapAttribution() {
-  const link = document.getElementById('map-attribution-link')
-  const button = document.getElementById('map-attribution-button')
-
-  const collapse = () => {
-    link.hidden = true
-    button.hidden = false
-  }
-
-  button.addEventListener('click', () => {
-    link.hidden = false
-    button.hidden = true
-    link.focus({ preventScroll: true })
-  })
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      // Keep the link available while someone is using it with the keyboard.
-      if (document.activeElement === link) {
-        link.addEventListener('blur', collapse, { once: true })
-      } else {
-        collapse()
-      }
-    }, 5000)
-  }, { once: true })
-}
-
-initMapAttribution()
 initMap()
 initIntro()

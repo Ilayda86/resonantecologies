@@ -21,6 +21,26 @@
     <a id="map-attribution-link" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>
     <button id="map-attribution-button" type="button" aria-label="Show OpenStreetMap attribution" aria-controls="map-attribution-link" hidden>©</button>
   </div>
+  <script>
+    (() => {
+      const link = document.getElementById('map-attribution-link')
+      const button = document.getElementById('map-attribution-button')
+
+      button.addEventListener('click', () => {
+        link.hidden = false
+        button.hidden = true
+        link.focus({ preventScroll: true })
+      })
+
+      // Start as soon as the credit is available, independently of the map scripts.
+      setTimeout(() => {
+        const linkHadFocus = document.activeElement === link
+        link.hidden = true
+        button.hidden = false
+        if (linkHadFocus) button.focus({ preventScroll: true })
+      }, 5000)
+    })()
+  </script>
 
   <div id="top-link">
     <a id="project-link">Project</a>
@@ -129,6 +149,6 @@
   </div>
 
   <script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=map-attribution"></script>
 </body>
 </html>
