@@ -166,18 +166,25 @@ html, body {
 }
 
 .author-name {
-  font-size: 0.78rem;
+  font-size: 0.9375rem;
   font-weight: 400;
   letter-spacing: 0.14em;
   color: #1a1a1a;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
   line-height: 1.4;
 }
 
+.author-role {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 1rem;
+}
+
 .author-bio {
-  font-size: 0.62rem;
+  font-size: 0.875rem;
   font-weight: 300;
-  line-height: 1.9;
+  line-height: 1.65;
   letter-spacing: 0.04em;
   color: #555555;
   margin-bottom: 0.85rem;
